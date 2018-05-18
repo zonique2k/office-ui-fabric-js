@@ -1,14 +1,5 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
-/// <reference path="../CheckBox/CheckBox.ts"/>
-"use strict";
-
-namespace fabric {
-  /**
-   * RadioButton Plugin
-   *
-   * Adds basic demonstration functionality to .ms-RadioButton components.
-   *
-   */
+import { CheckBox } from "../CheckBox/CheckBox"
   export class RadioButton {
 
     protected _choiceField: HTMLElement;
@@ -106,4 +97,3 @@ namespace fabric {
       this._choiceField.classList.remove("in-focus");
     }
   }
-}

@@ -1,9 +1,5 @@
-/// <reference path="../Panel/Panel.ts"/>
-
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
-"use strict";
-
-namespace fabric {
+import { Panel } from "../Panel/Panel";
 
   interface DropdownItems {
     oldOption: HTMLOptionElement;
@@ -44,7 +40,7 @@ namespace fabric {
     private _newDropdown: HTMLUListElement;
     private _dropdownItems: Array<DropdownItems>;
     private _panelContainer: HTMLElement;
-    private _panel: fabric.Panel;
+    private _panel: Panel;
 
     /**
      *
@@ -176,7 +172,7 @@ namespace fabric {
         this._panelContainer.appendChild(this._newDropdown);
 
         /** Assign the script to the new panel, which creates a panel host, overlay, and attaches it to the DOM */
-        this._panel = new fabric.Panel(this._panelContainer);
+        this._panel = new Panel(this._panelContainer);
       }
     }
     private _removeDropdownAsPanel(evt?: Event) {
@@ -257,5 +253,3 @@ namespace fabric {
       }
     }
   }
-
-}

@@ -1,14 +1,4 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
-
-"use strict";
-
-namespace fabric {
-  /**
-   * List Item Plugin
-   *
-   * Adds basic demonstration functionality to .ms-ListItem components.
-   *
-   */
   export class ListItem {
 
     private _container: HTMLElement;
@@ -37,4 +27,3 @@ namespace fabric {
       this._container.classList.toggle("is-selected");
     }
   }
-}

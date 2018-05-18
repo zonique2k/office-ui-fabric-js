@@ -12,7 +12,6 @@
 /**
  * @namespace fabric
  */
-namespace fabric {
   /**
    *
    * @constructor
@@ -424,4 +423,3 @@ namespace fabric {
       window.addEventListener("resize", this._resizeAction, false);
     }
   }
-}

@@ -1,7 +1,5 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
 
-namespace fabric {
-
   export class Overlay {
     public overlayElement: HTMLElement;
 
@@ -30,4 +28,3 @@ namespace fabric {
       document.body.classList.remove("ms-u-overflowHidden");
     }
   }
-}

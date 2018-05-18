@@ -1,17 +1,5 @@
-
-/// <reference path="../ContextualHost/ContextualHost.ts"/>
-/// <reference path="../PersonaCard/PersonaCard.ts"/>
-
-  /**
-   * FacePile
-   *
-   * A host for FacePile
-   *
-   */
-
-namespace fabric {
-
-  // const CONTEXTUAL_HOST_CLASS = ".ms-ContextualHost";
+import { ContextualHost } from "../ContextualHost/ContextualHost";
+import { PersonaCard } from "../PersonaCard/PersonaCard";
   const MODAL_POSITION = "top";
 
   export class Persona {
@@ -40,12 +28,12 @@ namespace fabric {
     }
 
     private _createPersonaCard() {
-      this._personaCardInstance = new fabric.PersonaCard(this._personaCard);
+      this._personaCardInstance = new PersonaCard(this._personaCard);
     }
 
     private _createContextualHostInstance(): void {
       this._personaCard.setAttribute("style", "display: block;");
-      this._contextualHostInstance = new fabric.ContextualHost(
+      this._contextualHostInstance = new ContextualHost(
         <HTMLElement>this._personaCard,
         MODAL_POSITION,
         this._persona
@@ -61,4 +49,3 @@ namespace fabric {
       this._persona.addEventListener("keyup", (e: KeyboardEvent) => (e.keyCode === 32) ? this._personaEventHandler() : null, false);
     }
   }
-}

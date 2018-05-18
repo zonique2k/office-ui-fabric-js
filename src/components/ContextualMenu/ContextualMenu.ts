@@ -1,10 +1,7 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
 
-/// <reference path="../ContextualHost/ContextualHost.ts"/>
-/// <reference path="../Button/Button.ts"/>
+import { ContextualHost } from "../ContextualHost/ContextualHost"
 
-
-namespace fabric {
 
   const MODAL_POSITION = "bottom";
   const SUBMENU_POSITION = "right";
@@ -108,7 +105,7 @@ namespace fabric {
           const button: Element = submenus[i].querySelector(".ms-ContextualMenu-link");
           const menu: Element = submenus[i].querySelector(".ms-ContextualMenu");
           if (menu) {
-            const contextualMenu: ContextualMenu = new fabric.ContextualMenu(menu, button, SUBMENU_POSITION);
+            const contextualMenu: ContextualMenu = new ContextualMenu(menu, button, SUBMENU_POSITION);
             menu.addEventListener("hostAdded", () => {
               this._host.setChildren(contextualMenu.getHost());
             });
@@ -119,7 +116,7 @@ namespace fabric {
 
     private _createModalHostView(container: Element, position: string, hostTarget: Element) {
       container.classList.remove("is-hidden");
-      this._host = new fabric.ContextualHost(<HTMLElement>container,
+      this._host = new ContextualHost(<HTMLElement>container,
                                           position,
                                           hostTarget,
                                           false);
@@ -128,4 +125,3 @@ namespace fabric {
       container.dispatchEvent(event);
     }
   }
-}

@@ -7,10 +7,6 @@
  *
  */
 
-/**
- * @namespace fabric
- */
-namespace fabric {
   /**
    *
    * @param {HTMLElement} container - the target container for an instance of SearchBox
@@ -179,4 +175,3 @@ namespace fabric {
       this._container.classList.add(SB_IS_ANIMATED);
     }
   }
-}

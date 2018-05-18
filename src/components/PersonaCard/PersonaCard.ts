@@ -1,16 +1,7 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
-// "use strict";
+import { Animate } from "../../utilities/Animate"
+import { Ease } from "../../utilities/Ease"
 
-/// <reference path="../../utilities/Animate.ts"/>
-/// <reference path="../../utilities/Ease.ts"/>
-
-namespace fabric {
-
-  /**
-   *
-   * Adds basic demonstration functionality to .ms-PersonaCard components.
-   *
-   */
   export class PersonaCard {
 
     private _container: Element;
@@ -101,7 +92,7 @@ namespace fabric {
 
     private _animateDetail(height: number): void {
       this._actionDetailBox.style.overflowY = "hidden";
-      fabric.Animate.transition(this._actionDetailBox, {
+      Animate.transition(this._actionDetailBox, {
         height: height,
         duration: 0.25,
         ease: Ease.SINE_EASE_OUT,
@@ -111,4 +102,3 @@ namespace fabric {
         });
     }
   }
-}

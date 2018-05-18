@@ -1,14 +1,6 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
 
-/// <reference path="../Overlay/Overlay.ts"/>
-
-namespace fabric {
-  /**
-   * Panel Host
-   *
-   * A host for the panel control
-   *
-   */
+import { Overlay } from "../Overlay/Overlay"
   const PANEL_HOST_CLASS = "ms-PanelHost";
 
   export class PanelHost {
@@ -55,11 +47,10 @@ namespace fabric {
       this.panelHost = document.createElement("div");
       this.panelHost.classList.add(PANEL_HOST_CLASS);
       this.panelHost.appendChild(this._layer);
-      this.overlay = new fabric.Overlay(this._overlayContainer);
+      this.overlay = new Overlay(this._overlayContainer);
       this.overlay.show();
 
       // Append Elements
       this.panelHost.appendChild(this.overlay.overlayElement);
     }
   }
-}

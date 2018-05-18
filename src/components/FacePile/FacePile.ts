@@ -1,14 +1,6 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
+import { Persona } from "../Persona/Persona"
 
-/// <reference path="../Persona/Persona.ts"/>
-
-namespace fabric {
-  /**
-   * FacePile
-   *
-   * A host for FacePile
-   *
-   */
   const PERSONA_CLASS = ".ms-Persona--facePile";
   const PERSONA_INITIALS = ".ms-Persona-initials";
   const PERSONA_IMAGE = ".ms-Persona-image";
@@ -58,4 +50,3 @@ namespace fabric {
     }
 
   }
-}

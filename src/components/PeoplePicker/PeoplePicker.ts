@@ -1,15 +1,7 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
 
-/// <reference path="../Overlay/Overlay.ts"/>
-/// <reference path="../ContextualHost/ContextualHost.ts"/>
-
-namespace fabric {
-  /**
-   * People Picker
-   *
-   * People picker control
-   *
-   */
+import { Overlay } from "../Overlay/Overlay"
+import { ContextualHost } from "../ContextualHost/ContextualHost"
   const MODAL_POSITION = "bottom";
   const TOKEN_CLASS = "ms-Persona--token";
 
@@ -54,7 +46,7 @@ namespace fabric {
     private _createModalHost(e) {
       e.stopPropagation();
       this._peoplePickerMenu.setAttribute("style", "display: block;");
-      this._contextualHostView = new fabric.ContextualHost(
+      this._contextualHostView = new ContextualHost(
         <HTMLElement>this._peoplePickerMenu,
         MODAL_POSITION,
         this._peoplePickerSearchBox,
@@ -221,4 +213,3 @@ namespace fabric {
       this._isContextualMenuOpen = false;
     }
   }
-}

@@ -5,7 +5,6 @@
 /// <reference path="../../../typings/jquery.d.ts"/>
 /// <reference path="../../../typings/pickadate.d.ts"/>
 
-namespace fabric {
   /**
    * DatePicker Plugin
    */
@@ -288,4 +287,3 @@ namespace fabric {
       return [newYear, newMonth, newDay];
     }
   }
-}

@@ -3,7 +3,6 @@
 /**
  * @namespace fabric
  */
-namespace fabric {
 
   class CircleObject {
     public element: HTMLElement;
@@ -156,4 +155,3 @@ namespace fabric {
       }
     }
   }
-}

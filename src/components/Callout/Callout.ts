@@ -1,22 +1,10 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
 
-/// <reference path="../Button/Button.ts"/>
-/// <reference path="../Button/IButton.ts"/>
+import { ContextualHost } from "../ContextualHost/ContextualHost"
 
-/**
- * Callout
- *
- * Add callouts to things and stuff
- *
- */
-
-/// <reference path="../ContextualHost/ContextualHost.ts"/>
 const STATE_HIDDEN = "is-hidden";
 const CLOSE_BUTTON_CLASS = ".ms-Callout-close";
 const MODIFIER_OOBE_CLASS = "ms-Callout--OOBE";
-
-namespace fabric {
-  "use strict";
 
   export class Callout {
 
@@ -46,7 +34,7 @@ namespace fabric {
       }
 
       this._container.classList.remove(STATE_HIDDEN);
-      this._contextualHost = new fabric.ContextualHost(
+      this._contextualHost = new ContextualHost(
         <HTMLElement>this._container,
         this._position,
         this._addTarget,
@@ -86,4 +74,3 @@ namespace fabric {
       }
     }
   }
-}

@@ -1,18 +1,8 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
 
-/// <reference path="../SearchBox/SearchBox.ts"/>
-/// <reference path="../CommandButton/CommandButton.ts"/>
-/// <reference path="../ContextualHost/ContextualHost.ts"/>
-
-/**
- * CommandBar
- *
- * Commanding and navigational surface
- *
- */
-
-namespace fabric {
-  "use strict";
+import { SearchBox } from "../SearchBox/SearchBox"
+import { CommandButton } from "../CommandButton/CommandButton"
+import { ContextualHost } from "../ContextualHost/ContextualHost"
 
   interface WindowSize {
     x: number;
@@ -33,7 +23,7 @@ namespace fabric {
     label: string;
     icon: string;
     isCollapsed: boolean;
-    commandButtonRef: fabric.CommandButton;
+    commandButtonRef: CommandButton;
   }
 
   const CONTEXTUAL_MENU = ".ms-ContextualMenu";
@@ -183,7 +173,7 @@ namespace fabric {
 
     private _createSearchInstance(): any {
       if (this._elements.searchBox) {
-        return new fabric.SearchBox(<HTMLElement>this._elements.searchBox);
+        return new SearchBox(<HTMLElement>this._elements.searchBox);
       } else {
         return false;
       }
@@ -235,7 +225,7 @@ namespace fabric {
           items = this._container.querySelectorAll(areaClass + " > " + COMMAND_BUTTON + ":not(" + CB_ITEM_OVERFLOW + ")");
 
       // Initiate the overflow command
-      this._commandButtonInstance = new fabric.CommandButton(<HTMLElement>this._elements.overflowCommand);
+      this._commandButtonInstance = new CommandButton(<HTMLElement>this._elements.overflowCommand);
 
       for (let i = 0; i < items.length; i++) {
         item = items[i];
@@ -259,7 +249,7 @@ namespace fabric {
           label: label,
           icon: icon,
           isCollapsed: (item.classList.contains(CB_NO_LABEL_CLASS)) ? true : false,
-          commandButtonRef: new fabric.CommandButton(<HTMLElement>item)
+          commandButtonRef: new CommandButton(<HTMLElement>item)
         });
       }
       return;
@@ -441,4 +431,3 @@ namespace fabric {
       this._setUIState();
     }
   }
-}

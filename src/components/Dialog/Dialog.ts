@@ -1,9 +1,6 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
-// @TODO - we can add this once jquery is removed
 
-/// <reference path="../Overlay/Overlay.ts"/>
-
-namespace fabric {
+import { Overlay } from "../Overlay/Overlay";
 
   export class Dialog {
 
@@ -33,7 +30,7 @@ namespace fabric {
 
     public open(): void {
       this._dialog.classList.add("is-open");
-      this._overlay = new fabric.Overlay();
+      this._overlay = new Overlay();
       if (!this._dialog.classList.contains("ms-Dialog--blocking")) {
         this._overlay.overlayElement.addEventListener("click", this.close.bind(this), false);
         this._overlay.show();
@@ -42,4 +39,3 @@ namespace fabric {
       this._dialog.parentElement.appendChild(this._overlay.overlayElement);
     }
   }
-}

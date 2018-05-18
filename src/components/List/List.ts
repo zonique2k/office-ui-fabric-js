@@ -1,14 +1,5 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
-/// <reference path="../ListItem/ListItem.ts"/>
-"use strict";
-
-namespace fabric {
-  /**
-   * List Item Plugin
-   *
-   * Adds basic demonstration functionality to .ms-List components.
-   *
-   */
+import { ListItem } from "../ListItem/ListItem"
   export class List {
 
     private _container: HTMLElement;
@@ -24,8 +15,7 @@ namespace fabric {
       this._listItemComponents = [];
       let choiceFieldElements: NodeListOf<Element> = this._container.querySelectorAll(".ms-ListItem");
       for (let i: number = 0; i < choiceFieldElements.length; i++) {
-            this._listItemComponents[i] =  new fabric.ListItem(<HTMLElement>choiceFieldElements[i]);
+            this._listItemComponents[i] =  new ListItem(<HTMLElement>choiceFieldElements[i]);
         }
     }
   }
-}

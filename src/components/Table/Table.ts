@@ -3,9 +3,6 @@
 /**
  * @namespace fabric
  */
-namespace fabric {
-  "use strict";
-
   export class Table {
     public container: HTMLElement;
 
@@ -43,4 +40,3 @@ namespace fabric {
     }
 
   }
-}

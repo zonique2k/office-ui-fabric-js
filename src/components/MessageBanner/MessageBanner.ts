@@ -3,9 +3,6 @@
 /**
  * @namespace fabric
  */
-namespace fabric {
-  "use strict";
-
   /**
    * MessageBanner component
    *
@@ -167,4 +164,3 @@ namespace fabric {
       this._closeButton.addEventListener("click", this.hide.bind(this), false);
     }
   }
-} // end fabric namespace

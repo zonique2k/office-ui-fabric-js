@@ -1,17 +1,5 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
 
-/**
- * @namespace fabric
- */
-namespace fabric {
-  "use strict";
-
-  /**
-   * Breadcrumb component
-   *
-   * Shows the user"s current location in a hierarchy and provides a means of navigating upward.
-   *
-   */
   export class Breadcrumb {
     // medium breakpoint
     private static MEDIUM: number = 639;
@@ -29,14 +17,7 @@ namespace fabric {
     private _currentMaxItems: number = 0;
     private _itemCollection: Array<any> = [];
     private _tabIndex: number;
-    /**
-     *
-     * @param {HTMLElement} container - the target container for an instance of Breadcrumb
-     * @constructor
-     *
-     * If dynamically populating a list run the constructor after the list has been populated
-     * in the DOM.
-    */
+
     constructor(container: HTMLElement) {
       this._tabIndex = 2;
       this.container = container;
@@ -89,9 +70,6 @@ namespace fabric {
       this._updateBreadcrumbs();
     }
 
-    /**
-     * initializes component
-    */
     public init(): void {
       this._cacheDOM();
       this._setListeners();
@@ -99,9 +77,6 @@ namespace fabric {
       this._onResize();
     }
 
-    /**
-     * create internal model of list items from DOM
-    */
     private _createItemCollection(): void {
       const length: number = this._listItems.length;
       let i: number = 0;
@@ -119,10 +94,6 @@ namespace fabric {
       }
     }
 
-    /**
-     * Re-render lists on resize
-     *
-    */
     private _onResize(): void {
       this._closeOverflow(null);
       this._renderList();
@@ -141,9 +112,6 @@ namespace fabric {
       this._currentMaxItems = maxItems;
     }
 
-    /**
-     * updates the breadcrumbs and overflow menu
-    */
     private _updateBreadcrumbs() {
       this._tabIndex = 2;
       const maxItems: number = window.innerWidth > Breadcrumb.MEDIUM ? 4 : 2;
@@ -157,9 +125,6 @@ namespace fabric {
       this._addBreadcrumbItems(maxItems);
     };
 
-    /**
-     * creates the overflow menu
-    */
     private _addItemsToOverflow(maxItems: number): void {
       this._resetList(this._contextMenu);
       const end: number = this._itemCollection.length - maxItems;
@@ -180,9 +145,6 @@ namespace fabric {
       });
     }
 
-    /**
-     * creates the breadcrumbs
-    */
     private _addBreadcrumbItems(maxItems: number): void {
       this._resetList(this._breadcrumbList);
       let i: number  = this._itemCollection.length - maxItems;
@@ -193,7 +155,7 @@ namespace fabric {
           const listItem: HTMLLIElement = document.createElement("li");
           const item: any = this._itemCollection[i];
           const a: HTMLAnchorElement = document.createElement("a");
-          const chevron: HTMLPhraseElement = document.createElement("i");
+          const chevron: any = document.createElement("i");
           listItem.className = "ms-Breadcrumb-listItem";
           a.className = "ms-Breadcrumb-itemLink";
           if (item.link !== null) {
@@ -209,23 +171,16 @@ namespace fabric {
       }
     }
 
-    /**
-     * resets a list by removing its children
-    */
     private _resetList(list: HTMLElement): void {
       while (list.firstChild) {
         list.removeChild(list.firstChild);
       }
     }
 
-    /**
-     * opens the overflow menu
-    */
     private _openOverflow(event: KeyboardEvent): void {
       if (this._overflowMenu.className.indexOf(" is-open") === -1) {
         this._overflowMenu.classList.add("is-open");
         this.removeOutlinesOnClick();
-        // force focus rect onto overflow button
         this._overflowButton.focus();
       }
     }
@@ -236,18 +191,12 @@ namespace fabric {
       }
     }
 
-    /**
-     * closes the overflow menu
-    */
     private _closeOverflow(event: Event): void {
       if (!event || event.target !== this._overflowButton) {
         this._overflowMenu.classList.remove("is-open");
       }
     }
 
-    /**
-     * caches elements and values of the component
-    */
     private _cacheDOM(): void {
       this._breadcrumb = this.container;
       this._breadcrumbList = <HTMLElement>this._breadcrumb.querySelector(".ms-Breadcrumb-list");
@@ -257,9 +206,6 @@ namespace fabric {
       this._overflowMenu = <HTMLElement>this._breadcrumb.querySelector(".ms-Breadcrumb-overflowMenu");
     }
 
-    /**
-    * sets handlers for resize and button click events
-    */
     private _setListeners(): void {
       window.addEventListener("resize", this._onResize, false);
       this._overflowButton.addEventListener("click", this._openOverflow, false);
@@ -268,4 +214,3 @@ namespace fabric {
       this._breadcrumbList.addEventListener("click", this.removeOutlinesOnClick, false);
     }
   }
-} // end fabric namespace

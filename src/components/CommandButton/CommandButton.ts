@@ -1,22 +1,5 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
-
-/// <reference path="../ContextualHost/ContextualHost.ts"/>
-
-/**
- * CommandButton
- *
- * Buttons used primarily in the command bar
- *
- */
-
-/**
- * @namespace fabric
- */
-namespace fabric {
-  /**
-   *
-   * @constructor
-   */
+import { ContextualHost } from "../ContextualHost/ContextualHost"
   const CONTEXT_CLASS = ".ms-ContextualMenu";
   const CB_SPLIT_CLASS = ".ms-CommandButton-splitIcon";
   const CB_BUTTON_CLASS = ".ms-CommandButton-button";
@@ -47,7 +30,7 @@ namespace fabric {
     }
 
     private _createModalHostView() {
-      this._modalHostView = new fabric.ContextualHost(this._contextualMenu, MODAL_POSITION, this._command, false);
+      this._modalHostView = new ContextualHost(this._contextualMenu, MODAL_POSITION, this._command, false);
     }
 
     private _setClick() {
@@ -64,4 +47,3 @@ namespace fabric {
       }
     }
   }
-}

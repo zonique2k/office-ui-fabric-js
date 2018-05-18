@@ -1,25 +1,13 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
 
-"use strict";
 
-namespace fabric {
-  /**
-   * CheckBox Plugin
-   *
-   * Adds basic demonstration functionality to .ms-CheckBox components.
-   *
-   */
   export class CheckBox {
 
     protected _choiceField: HTMLElement;
     protected _choiceInput: HTMLInputElement;
     private _container: HTMLElement;
 
-    /**
-     *
-     * @param {HTMLElement} container - the target container for an instance of CheckBox
-     * @constructor
-     */
+
     constructor(container: HTMLElement) {
       this._container = container;
       this._choiceField = <HTMLElement>this._container.querySelector(".ms-CheckBox-field");
@@ -105,4 +93,3 @@ namespace fabric {
       }
     }
   }
-}

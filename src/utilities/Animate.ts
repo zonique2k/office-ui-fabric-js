@@ -1,8 +1,6 @@
 // Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
 // "use strict";
 
-namespace fabric {
-
   const SCROLL_FRAME_RATE: number = 33;
 
   interface ITransitionObj {
@@ -327,4 +325,3 @@ namespace fabric {
       return (time === duration) ? begin + change : change * (-Math.pow(2, -10 * time / duration) + 1) + begin;
     }
   }
-}
