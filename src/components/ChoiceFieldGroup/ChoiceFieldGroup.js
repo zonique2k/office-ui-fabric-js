@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var RadioButton_1 = require("../RadioButton/RadioButton");
+import { RadioButton } from "../RadioButton/RadioButton";
 var ChoiceFieldGroup = (function () {
     function ChoiceFieldGroup(container) {
         this._choiceFieldGroup = container;
@@ -14,7 +12,7 @@ var ChoiceFieldGroup = (function () {
     ChoiceFieldGroup.prototype._initalSetup = function () {
         var choiceFieldElements = this._choiceFieldGroup.querySelectorAll(".ms-RadioButton");
         for (var i = 0; i < choiceFieldElements.length; i++) {
-            this._choiceFieldComponents[i] = new RadioButton_1.RadioButton(choiceFieldElements[i]);
+            this._choiceFieldComponents[i] = new RadioButton(choiceFieldElements[i]);
         }
     };
     ChoiceFieldGroup.prototype._addListeners = function () {
@@ -32,4 +30,4 @@ var ChoiceFieldGroup = (function () {
     };
     return ChoiceFieldGroup;
 }());
-exports.ChoiceFieldGroup = ChoiceFieldGroup;
+export { ChoiceFieldGroup };

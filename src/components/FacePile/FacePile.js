@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var Persona_1 = require("../Persona/Persona");
+import { Persona } from "../Persona/Persona";
 var PERSONA_CLASS = ".ms-Persona--facePile";
 var PERSONA_INITIALS = ".ms-Persona-initials";
 var PERSONA_IMAGE = ".ms-Persona-image";
@@ -25,10 +23,10 @@ var FacePile = (function () {
                     _thisPersona.querySelector(PERSONA_PRIMARY_CLASS).textContent : "",
                 secondaryText: _thisPersona.querySelector(PERSONA_SECONDARY_CLASS) ?
                     _thisPersona.querySelector(PERSONA_SECONDARY_CLASS).textContent : "",
-                personaInstance: new Persona_1.Persona(_thisPersona)
+                personaInstance: new Persona(_thisPersona)
             });
         }
     };
     return FacePile;
 }());
-exports.FacePile = FacePile;
+export { FacePile };

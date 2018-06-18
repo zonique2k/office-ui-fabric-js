@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var Toggle = (function () {
     function Toggle(container) {
         this._container = container;
@@ -19,4 +17,4 @@ var Toggle = (function () {
     };
     return Toggle;
 }());
-exports.Toggle = Toggle;
+export { Toggle };

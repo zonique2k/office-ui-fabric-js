@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var Pivot = (function () {
     function Pivot(container) {
         this._container = container;
@@ -48,4 +46,4 @@ var Pivot = (function () {
     };
     return Pivot;
 }());
-exports.Pivot = Pivot;
+export { Pivot };

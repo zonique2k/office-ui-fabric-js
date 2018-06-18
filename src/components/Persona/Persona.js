@@ -1,7 +1,5 @@
-"use strict";
-exports.__esModule = true;
-var ContextualHost_1 = require("../ContextualHost/ContextualHost");
-var PersonaCard_1 = require("../PersonaCard/PersonaCard");
+import { ContextualHost } from "../ContextualHost/ContextualHost";
+import { PersonaCard } from "../PersonaCard/PersonaCard";
 var MODAL_POSITION = "top";
 var Persona = (function () {
     function Persona(container) {
@@ -14,11 +12,11 @@ var Persona = (function () {
         }
     }
     Persona.prototype._createPersonaCard = function () {
-        this._personaCardInstance = new PersonaCard_1.PersonaCard(this._personaCard);
+        this._personaCardInstance = new PersonaCard(this._personaCard);
     };
     Persona.prototype._createContextualHostInstance = function () {
         this._personaCard.setAttribute("style", "display: block;");
-        this._contextualHostInstance = new ContextualHost_1.ContextualHost(this._personaCard, MODAL_POSITION, this._persona);
+        this._contextualHostInstance = new ContextualHost(this._personaCard, MODAL_POSITION, this._persona);
     };
     Persona.prototype._personaEventHandler = function () {
         this._createContextualHostInstance();
@@ -30,4 +28,4 @@ var Persona = (function () {
     };
     return Persona;
 }());
-exports.Persona = Persona;
+export { Persona };

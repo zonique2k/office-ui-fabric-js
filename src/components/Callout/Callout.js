@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var ContextualHost_1 = require("../ContextualHost/ContextualHost");
+import { ContextualHost } from "../ContextualHost/ContextualHost";
 var STATE_HIDDEN = "is-hidden";
 var CLOSE_BUTTON_CLASS = ".ms-Callout-close";
 var MODIFIER_OOBE_CLASS = "ms-Callout--OOBE";
@@ -22,7 +20,7 @@ var Callout = (function () {
             modifiers.push("primaryArrow");
         }
         this._container.classList.remove(STATE_HIDDEN);
-        this._contextualHost = new ContextualHost_1.ContextualHost(this._container, this._position, this._addTarget, true, modifiers);
+        this._contextualHost = new ContextualHost(this._container, this._position, this._addTarget, true, modifiers);
         if (this._closeButton) {
             this._closeButton.addEventListener("click", this._closeHandler.bind(this), false);
         }
@@ -53,4 +51,4 @@ var Callout = (function () {
     };
     return Callout;
 }());
-exports.Callout = Callout;
+export { Callout };

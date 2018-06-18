@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var Overlay_1 = require("../Overlay/Overlay");
+import { Overlay } from "../Overlay/Overlay";
 var PANEL_HOST_CLASS = "ms-PanelHost";
 var PanelHost = (function () {
     function PanelHost(layer, callBack) {
@@ -29,10 +27,10 @@ var PanelHost = (function () {
         this.panelHost = document.createElement("div");
         this.panelHost.classList.add(PANEL_HOST_CLASS);
         this.panelHost.appendChild(this._layer);
-        this.overlay = new Overlay_1.Overlay(this._overlayContainer);
+        this.overlay = new Overlay(this._overlayContainer);
         this.overlay.show();
         this.panelHost.appendChild(this.overlay.overlayElement);
     };
     return PanelHost;
 }());
-exports.PanelHost = PanelHost;
+export { PanelHost };

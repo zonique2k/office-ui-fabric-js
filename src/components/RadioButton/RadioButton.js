@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var RadioButton = (function () {
     function RadioButton(container) {
         this._container = container;
@@ -78,4 +76,4 @@ var RadioButton = (function () {
     };
     return RadioButton;
 }());
-exports.RadioButton = RadioButton;
+export { RadioButton };

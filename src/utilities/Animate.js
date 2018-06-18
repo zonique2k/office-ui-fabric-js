@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var SCROLL_FRAME_RATE = 33;
 var Animate = (function () {
     function Animate() {
@@ -245,4 +243,4 @@ var Animate = (function () {
     Animate._animationObjects = [];
     return Animate;
 }());
-exports.Animate = Animate;
+export { Animate };

@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var DatePicker = (function () {
     function DatePicker(container, options) {
         var _this = this;
@@ -171,4 +169,4 @@ var DatePicker = (function () {
     };
     return DatePicker;
 }());
-exports.DatePicker = DatePicker;
+export { DatePicker };

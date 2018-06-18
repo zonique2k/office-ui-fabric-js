@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var ProgressIndicator = (function () {
     function ProgressIndicator(container) {
         this.container = container;
@@ -31,4 +29,4 @@ var ProgressIndicator = (function () {
     };
     return ProgressIndicator;
 }());
-exports.ProgressIndicator = ProgressIndicator;
+export { ProgressIndicator };

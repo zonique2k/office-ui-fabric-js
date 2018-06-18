@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var Overlay_1 = require("../Overlay/Overlay");
+import { Overlay } from "../Overlay/Overlay";
 var Dialog = (function () {
     function Dialog(dialog) {
         this._dialog = dialog;
@@ -21,7 +19,7 @@ var Dialog = (function () {
     };
     Dialog.prototype.open = function () {
         this._dialog.classList.add("is-open");
-        this._overlay = new Overlay_1.Overlay();
+        this._overlay = new Overlay();
         if (!this._dialog.classList.contains("ms-Dialog--blocking")) {
             this._overlay.overlayElement.addEventListener("click", this.close.bind(this), false);
             this._overlay.show();
@@ -31,4 +29,4 @@ var Dialog = (function () {
     };
     return Dialog;
 }());
-exports.Dialog = Dialog;
+export { Dialog };

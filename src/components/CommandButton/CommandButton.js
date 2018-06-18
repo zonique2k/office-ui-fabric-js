@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var ContextualHost_1 = require("../ContextualHost/ContextualHost");
+import { ContextualHost } from "../ContextualHost/ContextualHost";
 var CONTEXT_CLASS = ".ms-ContextualMenu";
 var CB_SPLIT_CLASS = ".ms-CommandButton-splitIcon";
 var CB_BUTTON_CLASS = ".ms-CommandButton-button";
@@ -20,7 +18,7 @@ var CommandButton = (function () {
         this._checkForMenu();
     }
     CommandButton.prototype._createModalHostView = function () {
-        this._modalHostView = new ContextualHost_1.ContextualHost(this._contextualMenu, MODAL_POSITION, this._command, false);
+        this._modalHostView = new ContextualHost(this._contextualMenu, MODAL_POSITION, this._command, false);
     };
     CommandButton.prototype._setClick = function () {
         if (this._splitButton) {
@@ -37,4 +35,4 @@ var CommandButton = (function () {
     };
     return CommandButton;
 }());
-exports.CommandButton = CommandButton;
+export { CommandButton };

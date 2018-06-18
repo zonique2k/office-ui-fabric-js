@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var CONTEXT_STATE_CLASS = "is-open";
 var MODAL_STATE_POSITIONED = "is-positioned";
 var CONTEXT_HOST_MAIN_CLASS = "ms-ContextualHost-main";
@@ -317,4 +315,4 @@ var ContextualHost = (function () {
     };
     return ContextualHost;
 }());
-exports.ContextualHost = ContextualHost;
+export { ContextualHost };

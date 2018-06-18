@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var PanelHost_1 = require("../PanelHost/PanelHost");
+import { PanelHost } from "../PanelHost/PanelHost";
 var ANIMATE_IN_STATE = "animate-in";
 var ANIMATE_OUT_STATE = "animate-out";
 var ANIMATION_END = 400;
@@ -9,7 +7,7 @@ var Panel = (function () {
         this._panel = panel;
         this._direction = direction || "right";
         this._animateOverlay = animateOverlay || true;
-        this.panelHost = new PanelHost_1.PanelHost(this._panel, this._animateInPanel);
+        this.panelHost = new PanelHost(this._panel, this._animateInPanel);
         this._closeButton = this._panel.querySelector(".ms-PanelAction-close");
         this._clickHandler = this.dismiss.bind(this, null);
         this._setEvents();
@@ -46,4 +44,4 @@ var Panel = (function () {
     };
     return Panel;
 }());
-exports.Panel = Panel;
+export { Panel };

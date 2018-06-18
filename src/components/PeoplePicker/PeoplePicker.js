@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var ContextualHost_1 = require("../ContextualHost/ContextualHost");
+import { ContextualHost } from "../ContextualHost/ContextualHost";
 var MODAL_POSITION = "bottom";
 var TOKEN_CLASS = "ms-Persona--token";
 var PeoplePicker = (function () {
@@ -23,7 +21,7 @@ var PeoplePicker = (function () {
     PeoplePicker.prototype._createModalHost = function (e) {
         e.stopPropagation();
         this._peoplePickerMenu.setAttribute("style", "display: block;");
-        this._contextualHostView = new ContextualHost_1.ContextualHost(this._peoplePickerMenu, MODAL_POSITION, this._peoplePickerSearchBox, false, [""], true, this._contextHostCallBack.bind(this));
+        this._contextualHostView = new ContextualHost(this._peoplePickerMenu, MODAL_POSITION, this._peoplePickerSearchBox, false, [""], true, this._contextHostCallBack.bind(this));
         this._peoplePickerSearchBox.classList.add("is-active");
         this._isContextualMenuOpen = true;
     };
@@ -141,4 +139,4 @@ var PeoplePicker = (function () {
     };
     return PeoplePicker;
 }());
-exports.PeoplePicker = PeoplePicker;
+export { PeoplePicker };

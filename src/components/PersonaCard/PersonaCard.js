@@ -1,7 +1,5 @@
-"use strict";
-exports.__esModule = true;
-var Animate_1 = require("../../utilities/Animate");
-var Ease_1 = require("../../utilities/Ease");
+import { Animate } from "../../utilities/Animate";
+import { Ease } from "../../utilities/Ease";
 var PersonaCard = (function () {
     function PersonaCard(container) {
         this._container = container;
@@ -70,10 +68,10 @@ var PersonaCard = (function () {
     PersonaCard.prototype._animateDetail = function (height) {
         var _this = this;
         this._actionDetailBox.style.overflowY = "hidden";
-        Animate_1.Animate.transition(this._actionDetailBox, {
+        Animate.transition(this._actionDetailBox, {
             height: height,
             duration: 0.25,
-            ease: Ease_1.Ease.SINE_EASE_OUT,
+            ease: Ease.SINE_EASE_OUT,
             onEnd: function () {
                 _this._actionDetailBox.style.overflowY = "auto";
             }
@@ -81,4 +79,4 @@ var PersonaCard = (function () {
     };
     return PersonaCard;
 }());
-exports.PersonaCard = PersonaCard;
+export { PersonaCard };

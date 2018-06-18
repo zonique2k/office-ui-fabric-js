@@ -1,7 +1,5 @@
-"use strict";
-exports.__esModule = true;
-var SearchBox_1 = require("../SearchBox/SearchBox");
-var CommandButton_1 = require("../CommandButton/CommandButton");
+import { SearchBox } from "../SearchBox/SearchBox";
+import { CommandButton } from "../CommandButton/CommandButton";
 var CONTEXTUAL_MENU = ".ms-ContextualMenu";
 var CONTEXTUAL_MENU_ITEM = ".ms-ContextualMenu-item";
 var CONTEXTUAL_MENU_LINK = ".ms-ContextualMenu-link";
@@ -119,7 +117,7 @@ var CommandBar = (function () {
     };
     CommandBar.prototype._createSearchInstance = function () {
         if (this._elements.searchBox) {
-            return new SearchBox_1.SearchBox(this._elements.searchBox);
+            return new SearchBox(this._elements.searchBox);
         }
         else {
             return false;
@@ -161,7 +159,7 @@ var CommandBar = (function () {
     };
     CommandBar.prototype._createItemCollection = function (iCollection, areaClass) {
         var item, label, iconClasses, splitClasses, items = this._container.querySelectorAll(areaClass + " > " + COMMAND_BUTTON + ":not(" + CB_ITEM_OVERFLOW + ")");
-        this._commandButtonInstance = new CommandButton_1.CommandButton(this._elements.overflowCommand);
+        this._commandButtonInstance = new CommandButton(this._elements.overflowCommand);
         for (var i = 0; i < items.length; i++) {
             item = items[i];
             label = item.querySelector(COMMAND_BUTTON_LABEL).textContent;
@@ -181,7 +179,7 @@ var CommandBar = (function () {
                 label: label,
                 icon: icon,
                 isCollapsed: (item.classList.contains(CB_NO_LABEL_CLASS)) ? true : false,
-                commandButtonRef: new CommandButton_1.CommandButton(item)
+                commandButtonRef: new CommandButton(item)
             });
         }
         return;
@@ -337,4 +335,4 @@ var CommandBar = (function () {
     };
     return CommandBar;
 }());
-exports.CommandBar = CommandBar;
+export { CommandBar };

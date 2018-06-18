@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var Panel_1 = require("../Panel/Panel");
+import { Panel } from "../Panel/Panel";
 var DROPDOWN_CLASS = "ms-Dropdown";
 var DROPDOWN_TITLE_CLASS = "ms-Dropdown-title";
 var DROPDOWN_LABEL_HELPER = "ms-Dropdown-truncator";
@@ -114,7 +112,7 @@ var Dropdown = (function () {
             this._panelContainer.classList.add(IS_OPEN_CLASS);
             this._panelContainer.classList.add(ANIMATE_IN_CLASS);
             this._panelContainer.appendChild(this._newDropdown);
-            this._panel = new Panel_1.Panel(this._panelContainer);
+            this._panel = new Panel(this._panelContainer);
         }
     };
     Dropdown.prototype._removeDropdownAsPanel = function (evt) {
@@ -180,4 +178,4 @@ var Dropdown = (function () {
     };
     return Dropdown;
 }());
-exports.Dropdown = Dropdown;
+export { Dropdown };

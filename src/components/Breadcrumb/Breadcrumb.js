@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var Breadcrumb = (function () {
     function Breadcrumb(container) {
         this._currentMaxItems = 0;
@@ -162,4 +160,4 @@ var Breadcrumb = (function () {
     Breadcrumb.MEDIUM = 639;
     return Breadcrumb;
 }());
-exports.Breadcrumb = Breadcrumb;
+export { Breadcrumb };

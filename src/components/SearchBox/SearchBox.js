@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var SB_FIELD = ".ms-SearchBox-field";
 var SB_CLEAR_BUTTON = ".ms-SearchBox-clear";
 var SB_EXIT_BUTTON = ".ms-SearchBox-exit";
@@ -137,4 +135,4 @@ var SearchBox = (function () {
     };
     return SearchBox;
 }());
-exports.SearchBox = SearchBox;
+export { SearchBox };

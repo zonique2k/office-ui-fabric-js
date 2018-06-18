@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var CircleObject = (function () {
     function CircleObject(element, j) {
         this.element = element;
@@ -106,4 +104,4 @@ var Spinner = (function () {
     };
     return Spinner;
 }());
-exports.Spinner = Spinner;
+export { Spinner };

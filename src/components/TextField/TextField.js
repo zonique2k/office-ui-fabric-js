@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var TextFieldConsts;
 (function (TextFieldConsts) {
     var Type;
@@ -51,4 +49,4 @@ var TextField = (function () {
     };
     return TextField;
 }());
-exports.TextField = TextField;
+export { TextField };

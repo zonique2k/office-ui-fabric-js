@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var ListItem = (function () {
     function ListItem(container) {
         this._container = container;
@@ -17,4 +15,4 @@ var ListItem = (function () {
     };
     return ListItem;
 }());
-exports.ListItem = ListItem;
+export { ListItem };

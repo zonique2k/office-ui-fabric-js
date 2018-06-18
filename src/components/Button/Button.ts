@@ -6,8 +6,6 @@
  * Mostly just a click handler
  *
  */
-namespace fabric {
-  "use strict";
 
   export class Button {
 
@@ -31,4 +29,3 @@ namespace fabric {
       this._container.addEventListener("click", this._clickHandler, false);
     }
   }
-}

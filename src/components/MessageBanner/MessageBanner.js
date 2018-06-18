@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var MessageBanner = (function () {
     function MessageBanner(container) {
         this._textContainerMaxWidth = 700;
@@ -97,4 +95,4 @@ var MessageBanner = (function () {
     };
     return MessageBanner;
 }());
-exports.MessageBanner = MessageBanner;
+export { MessageBanner };

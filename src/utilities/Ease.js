@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var Ease = (function () {
     function Ease() {
     }
@@ -30,4 +28,4 @@ var Ease = (function () {
     Ease.BACK_EASE_IN_OUT = Ease.CB + "(0.680, -0.550, 0.265, 1.550)";
     return Ease;
 }());
-exports.Ease = Ease;
+export { Ease };

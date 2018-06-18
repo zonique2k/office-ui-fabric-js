@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var Overlay = (function () {
     function Overlay(overlayElement) {
         if (overlayElement) {
@@ -25,4 +23,4 @@ var Overlay = (function () {
     };
     return Overlay;
 }());
-exports.Overlay = Overlay;
+export { Overlay };

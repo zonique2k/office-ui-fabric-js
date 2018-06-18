@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var Table = (function () {
     function Table(container) {
         this.container = container;
@@ -24,4 +22,4 @@ var Table = (function () {
     };
     return Table;
 }());
-exports.Table = Table;
+export { Table };

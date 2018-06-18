@@ -1,6 +1,4 @@
-"use strict";
-exports.__esModule = true;
-var ContextualHost_1 = require("../ContextualHost/ContextualHost");
+import { ContextualHost } from "../ContextualHost/ContextualHost";
 var MODAL_POSITION = "bottom";
 var SUBMENU_POSITION = "right";
 var ContextualMenu = (function () {
@@ -97,11 +95,11 @@ var ContextualMenu = (function () {
     };
     ContextualMenu.prototype._createModalHostView = function (container, position, hostTarget) {
         container.classList.remove("is-hidden");
-        this._host = new ContextualHost_1.ContextualHost(container, position, hostTarget, false);
+        this._host = new ContextualHost(container, position, hostTarget, false);
         var event = document.createEvent("Event");
         event.initEvent("hostAdded", true, true);
         container.dispatchEvent(event);
     };
     return ContextualMenu;
 }());
-exports.ContextualMenu = ContextualMenu;
+export { ContextualMenu };

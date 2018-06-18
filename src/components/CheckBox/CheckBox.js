@@ -1,5 +1,3 @@
-"use strict";
-exports.__esModule = true;
 var CheckBox = (function () {
     function CheckBox(container) {
         this._container = container;
@@ -78,4 +76,4 @@ var CheckBox = (function () {
     };
     return CheckBox;
 }());
-exports.CheckBox = CheckBox;
+export { CheckBox };
