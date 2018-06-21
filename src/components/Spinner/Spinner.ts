@@ -24,7 +24,7 @@
 
     public eightSize: number = 0.2;
     public animationSpeed: number = 90;
-    public interval: number;
+    public interval: any;
     public spinner: HTMLElement;
     public numCircles: number;
     public offsetSize: number;

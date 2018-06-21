@@ -106,6 +106,9 @@ var SearchBox = (function () {
     };
     SearchBox.prototype._handleBlur = function (event) {
         var _this = this;
+        console.log("_handleBlur");
+        if (this._searchBox.classList.contains("ignoreBlur"))
+            return;
         if (!this._clearOnly) {
             this._searchBox.removeEventListener("keyup", this._boundEnableClose);
             setTimeout(function () {
